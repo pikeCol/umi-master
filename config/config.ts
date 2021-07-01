@@ -12,6 +12,8 @@ export default defineConfig({
   history: {
     type: 'browser',
   },
+  mfsu: {},
+  webpack5: {},
   locale: {
     // default zh-CN
     default: 'zh-CN',
