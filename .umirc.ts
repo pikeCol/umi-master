@@ -23,7 +23,7 @@ export default defineConfig({
       apps: [
         {
           name: 'app1', // 唯一 id
-          entry: '//localhost:7001', // html entry
+          entry: '//localhost:8001/app1', // html entry
         },
       ],
     },
@@ -34,10 +34,10 @@ export default defineConfig({
       // component: '@/pages/index',
       component: '../layouts/index.js',
       routes: [
-        // {
-        //   path: '/app1',
-        //   component: './subContainer',
-        // },
+        {
+          path: '/app1',
+          microApp: 'app1',
+        },
         // {
         //   path: '/app2',
         //   component: './subContainer',
