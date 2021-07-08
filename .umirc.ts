@@ -22,8 +22,12 @@ export default defineConfig({
     master: {
       apps: [
         {
-          name: 'app1', // 唯一 id
+          name: 'app1', // 唯一 packageName
           entry: '//localhost:8001/app1', // html entry
+        },
+        {
+          name: 'app2', // 唯一 id, packageName
+          entry: '//localhost:8002/app2', // html entry
         },
       ],
     },
@@ -38,10 +42,11 @@ export default defineConfig({
           path: '/app1',
           microApp: 'app1',
         },
-        // {
-        //   path: '/app2',
-        //   component: './subContainer',
-        // },
+        {
+          path: '/app2',
+          exact: false,
+          component: './app2/index.js',
+        },
         {
           path: '/',
           component: './index',
